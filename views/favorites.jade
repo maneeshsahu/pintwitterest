@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1= Pintwitterest
+
+  div.main_content.full
+    for favorite in favorites
+      if favorite.entities.hasOwnProperty('media')
+        - var tweetLink = '/oembed/' + favorite.id
+        div.white_frame.tack_box
+          div.tack_thumb
+            for media in favorite.entities.media
+              img(src=media.media_url+":thumb")
+              ul.hover_box
+                li
+                  a.like(href="") Retweet
+                li.last
+                  a.save(href="") Favorite
+          h4.title
+            a(href=tweetLink)= favorite.text
+          div.tack_guts
+            div.avatar
+              a(href="http://twitter.com/" + favorite.user.screen_name) 
+                img(src=favorite.user.profile_image_url)
+            div.user
+              a(href=favorite.user.url)= favorite.user.screen_name
+            ul.stats
+              li.likes
+                span.glyphicon.glyphicon-retweet #{favorite.retweet_count}
+              li.comment_count
+                span.glyphicon.glyphicon-star #{favorite.favorite_count}

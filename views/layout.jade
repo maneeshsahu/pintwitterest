@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/masonry.css')
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css')
+
+ 
+    script(type='text/javascript', src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.js')
+    script(type='text/javascript', src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js')
+    script(type='text/javascript', src='/javascripts/mason.js')
+  body
+    div.navbar.navbar-inverse.navbar-fixed-top
+      div.container
+        div.navbar-header
+          a.navbar-brand(href="#")
+            img(src="/images/pintwitterest.png", alt="Pintwitterest")
+        div.navbar-collapse.collapse
+          form.navbar-form.navbar-right
+            div.form#target
+              input.form-control(type="text", placeholder=twitterid)
+              button.btn.btn-success(type="submit") Go
+    
+    div.jumbotron
+      h2 #{twitterid}'s Tweets
+      p.
+         Pintwitterest displays the favorite tweets in a Pinterest layout.
+    
+    block content
