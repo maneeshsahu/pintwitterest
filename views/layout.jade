@@ -6,11 +6,11 @@ html
     link(rel='stylesheet', href='/stylesheets/masonry.css')
     link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
     link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css')
-
  
-    script(type='text/javascript', src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.js')
+    script(type='text/javascript', src='//code.jquery.com/jquery-2.1.1.min.js')
     script(type='text/javascript', src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js')
-    script(type='text/javascript', src='/javascripts/mason.js')
+    script(type='text/javascript', src='/javascripts/pt.js')
+    //script(type='text/javascript', src='/javascripts/mason.js')
   body
     div.navbar.navbar-inverse.navbar-fixed-top
       div.container
@@ -18,9 +18,9 @@ html
           a.navbar-brand(href="#")
             img(src="/images/pintwitterest.png", alt="Pintwitterest")
         div.navbar-collapse.collapse
-          form.navbar-form.navbar-right
-            div.form#target
-              input.form-control(type="text", placeholder=twitterid)
+          form.navbar-form.navbar-right#target(action="/favorites/")
+            div.form
+              input.form-control(id="twitterid", type="text", placeholder=twitterid, value=twitterid)
               button.btn.btn-success(type="submit") Go
     
     div.jumbotron

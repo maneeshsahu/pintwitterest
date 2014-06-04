@@ -112,11 +112,6 @@ $(function() {
     }).scroll();
 });
 
-$("#target").submit(function(event) {
-    alert("Handler called");
-    event.preventDefault();
-});
-
 $(function() {
   $(".like.auth, .unlike").click(function(event) {
     event.preventDefault();
