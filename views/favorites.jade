@@ -6,7 +6,7 @@ block content
   div.main_content.full
     for favorite in favorites
       if favorite.entities.hasOwnProperty('media')
-        - var tweetLink = '/oembed/' + favorite.id
+        - var tweetLink = '/oembed/' + favorite.id_str
         div.white_frame.tack_box
           div.tack_thumb
             for media in favorite.entities.media
