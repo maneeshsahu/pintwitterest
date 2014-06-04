@@ -10,7 +10,8 @@ block content
         div.white_frame.tack_box
           div.tack_thumb
             for media in favorite.entities.media
-              img(src=media.media_url+":thumb")
+              a(href=tweetLink)
+                img(src=media.media_url+":thumb")
               ul.hover_box
                 li
                   a.like(href="") Retweet
