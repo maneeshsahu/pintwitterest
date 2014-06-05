@@ -34,7 +34,8 @@ router.get('/:twitterid', function(req, res) {
 				} else {
 					console.log(data2);
 
-					res.render('favorites', { twitterid: twitterid,
+					res.render('favorites', { title: 'Pintwitterest: ' + twitterid,
+											  twitterid: twitterid,
 											  favorites: data2 });
 				}
 
