@@ -17,7 +17,7 @@ After downloading pintwitterest and extracting the archive. You can start the ap
 ./bin/www
 ```
 
-Point your browser to http://localhost:3000 . You can view the favorites of a user by entering the username
+Point your browser to [http://localhost:3000] . You can view the favorites of a user by entering the username
 in the search box.
 
 
